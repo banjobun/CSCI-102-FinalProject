@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Final Project | Home</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<style>
+    header{
+        position: relative;
+        background-color: #333;
+    }
+    /* Contact Page */
+    #contacthead{
+        padding-left: 7em;
+    }
+    label{
+        float: left;
+        display: block;
+        text-align: right;
+        width: 13em;
+        min-width: 13em;
+        padding-right: 1em;
+    }
+
+    input, textarea{
+        display: block;
+        margin-bottom: 1em;
+    }
+</style>
+<script>
+    function validateForm(){
+        let form = documents.forms[0];
+        if(form.name.value == ""){
+            alert("Please enter your name.")
+        }else if(form.email.value == ""){
+            alert("Please enter your email.");
+        }else if(!form.email.value.includes("@")){
+            alert("Please enter a valid email address.")
+        }else{
+            return true;
+        }
+    }
+</script>
+<body>
+        <div id="wrapper">
+            <header>
+                <div class="logo">Pete's Pets</div>
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="About.html">About</a></li>
+                        <li><a href="Services.html">Services</a></li>
+                        <li><a href="Pets.html">Pets</a></li>
+                        <li><a href="Contact.html">Contact</a></li>
+                    </ul>
+                </nav><!-- End of Nav -->
+            </header><!-- End of Header -->
+            
+            <main>
+                <h2 id="contacthead">Contact Us</h2>
+                <form method="POST" action="Contact.html" onsubmit="return validateForm();">
+                    <label for="name">Name:</label>
+                    <input type="text" name="name" id="name">
+                    <label for="email">Email:</label>
+                    <input type="email" name="email" id="email">
+                    <label for="comments">Comments:</label>
+                    <textarea name="comments" id="comments" cols="20" rows="3"></textarea>
+                    <label for="newsletter">Join our newsletter.</label>
+                    <input type="checkbox" name="newsletter" id="newsletter" checked>
+                    <input type="submit" value="Submit" id="formSubmit">
+                </form>
+
+            </main><!-- End of Main -->
+    
+
+            <footer>
+                <div id="footNav">
+                    <nav>
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="About.html">About</a></li>
+                                <li><a href="Services.html">Services</a></li>
+                                <li><a href="Pets.html">Pets</a></li>
+                                <li><a href="Contact.html">Contact</a></li>
+                            </ul>
+                        </nav><!-- End of Nav -->
+                </div>
+            </footer>
+    
+    
+        </div><!-- End of Wrapper -->
+    </body>
+</html>
