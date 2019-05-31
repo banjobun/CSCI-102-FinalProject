@@ -14,7 +14,7 @@
     }
     /* Contact Page */
     #contacthead{
-        padding-left: 7em;
+        margin-left: 7em;
     }
     label{
         float: left;
@@ -29,19 +29,28 @@
         display: block;
         margin-bottom: 1em;
     }
+    #formsubmit{
+        margin-left: 12em;
+        font-size: 14px;
+        width: 13em;
+    }   
+    #contactform{
+        min-width: 410px;
+    } 
 </style>
 <script>
-    function validateForm(){
-        let form = documents.forms[0];
-        if(form.name.value == ""){
-            alert("Please enter your name.")
-        }else if(form.email.value == ""){
+    function validateForm(){ 
+        // Name
+        if(document.forms[0].name.value == ""){
+            alert("Please enter your name.");
+        }else if(document.forms[0].email.value == ""){
             alert("Please enter your email.");
-        }else if(!form.email.value.includes("@")){
-            alert("Please enter a valid email address.")
         }else{
+            alert("Information sent.")
             return true;
         }
+        // If block failed so dont validate
+        return false;
     }
 </script>
 <body>
@@ -60,18 +69,20 @@
             </header><!-- End of Header -->
             
             <main>
-                <h2 id="contacthead">Contact Us</h2>
-                <form method="POST" action="Contact.html" onsubmit="return validateForm();">
-                    <label for="name">Name:</label>
-                    <input type="text" name="name" id="name">
-                    <label for="email">Email:</label>
-                    <input type="email" name="email" id="email">
-                    <label for="comments">Comments:</label>
-                    <textarea name="comments" id="comments" cols="20" rows="3"></textarea>
-                    <label for="newsletter">Join our newsletter.</label>
-                    <input type="checkbox" name="newsletter" id="newsletter" checked>
-                    <input type="submit" value="Submit" id="formSubmit">
-                </form>
+                <div id="contactform">
+                    <h2 id="contacthead">Contact Us</h2>
+                    <form method="GET" action="" onsubmit="return validateForm();">
+                        <label for="name">Name:</label>
+                        <input type="text" name="name" id="name">
+                        <label for="email">Email:</label>
+                        <input type="email" name="email" id="email">
+                        <label for="comments">Comments:</label>
+                        <textarea name="comments" id="comments" cols="20" rows="3"></textarea>
+                        <label for="newsletter">Join our newsletter.</label>
+                        <input type="checkbox" name="newsletter" id="newsletter" checked>
+                        <input type="submit" value="Submit" id="formsubmit">
+                    </form>
+                </div>
 
             </main><!-- End of Main -->
     
