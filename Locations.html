@@ -12,6 +12,22 @@
         position: relative;
         background-color: #333;
     }
+    #locationwrapper{
+        text-align: center;
+        background-image: url(../images/mapbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        
+    }
+    h1, p{
+        color: #000;
+    }
+    h1{
+        text-shadow: #fff 1px 1px;
+    }
+    p{
+        font-size: 20px;
+    }
     .row:after{
         content: "";
         display: table;
@@ -22,24 +38,51 @@
         width: 50%;
     }
     #mapimage{
-        background-image: url(../images/map.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
+        width: 80%;
+        margin: 0 10%;
+        border: 2px solid #17a2b8;
     }
     #hourstable{
-        width: 100%;
+        width: 90%;
+        margin: 0 5%;
     }
     #hourstable, tr, th, td {
-        border: 1px solid black;
+        border: 2px solid #17a2b8;
+        color: #fff;
+        background-color: #333;
         border-collapse: collapse;
-        text-align: center;
+        margin-bottom: 10px;
     }
-
-    th, td{
-        padding: 1px 2px;
+    th{
+        text-align: right;
+        vertical-align: center;
+        padding: 6% 5px;
+        width: 25%;
     }
-
+    tr{
+        padding: 2px 1px;
+    }
+    @media(max-width:600px){
+        #locationwrapper{
+            background-color: #ccc;
+            background-image: none;
+        }
+        .twocolumn{
+            width: 100%;
+        }
+        #mapimage{
+            width: 100%;
+            margin: 0;
+            margin-bottom: 10px;
+        }
+        #hourstable{
+            width: 100%;
+            margin: 0 0 10px 0;
+        }
+        th{
+            padding: 3% 5px;
+        }
+    }
 </style>
 <body>
         <div id="wrapper">
@@ -57,34 +100,42 @@
             </header><!-- End of Header -->
             
             <main>
-                <h1>Come find us!</h1>
-                <div class="row">
-                    <div class="twocolumn">
-                        <p>
-                            We are located on Orchard Gate off of Newmarket.
-                        </p>
-                        <img id="mapimage" alt="Map showing location of Pete's Pets.">
-                    </div>
-                    <div class="twocolumn">
-                        <p>
-                            Come drop by to see our freinds during our hours listed below. (We are closed Saturday and Sunday).
-                        </p>
-                        <table id="hourstable">
-                            <tr>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                            </tr>
-                            <tr>
-                                <td>10AM-7PM</td>
-                                <td>10AM-7PM</td>
-                                <td>10AM-8PM</td>
-                                <td>10AM-8PM</td>
-                                <td>10AM-10PM</td>
-                            </tr>
-                        </table>
+                <div id="locationwrapper">
+                    <h1>Come find us!</h1>
+                    <div class="row">
+                        <div class="twocolumn">
+                            <p>
+                                We are located on Orchard Gate off of Newmarket.
+                            </p>
+                            <img id="mapimage" src="images/map.png" alt="Map showing location of Pete's Pets.">
+                        </div>
+                        <div class="twocolumn">
+                            <p>
+                                Come drop by to see our freinds during our hours listed below. (We are closed Saturday and Sunday).
+                            </p>
+                            <table id="hourstable">
+                                <tr>
+                                    <th>Monday</th>
+                                    <td>10AM-7PM</td>
+                                </tr>
+                                <tr>
+                                    <th>Tuesday</th>
+                                    <td>10AM-7PM</td>
+                                </tr>
+                                <tr>
+                                    <th>Wednesday</th>
+                                    <td>10AM-8PM</td>
+                                </tr>
+                                <tr>
+                                    <th>Thursday</th>
+                                    <td>10AM-8PM</td>
+                                </tr>
+                                <tr>
+                                    <th>Friday</th>
+                                    <td>10AM-10PM</td>
+                                </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 

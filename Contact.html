@@ -13,30 +13,31 @@
         background-color: #333;
     }
     /* Contact Page */
-    #contacthead{
-        margin-left: 7em;
+    #contactform{
+        text-align: center;
+        width: 60%;
+        margin: 0 20%;
     }
     label{
         float: left;
         display: block;
         text-align: right;
-        width: 13em;
-        min-width: 13em;
         padding-right: 1em;
     }
 
     input, textarea{
         display: block;
         margin-bottom: 1em;
-    }
-    #formsubmit{
-        margin-left: 12em;
-        font-size: 14px;
-        width: 13em;
     }   
-    #contactform{
-        min-width: 410px;
-    } 
+    .row:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+    .twocolumn{
+        float: left;
+        width: 50%;
+    }
 </style>
 <script>
     function validateForm(){ 
@@ -72,18 +73,28 @@
                 <div id="contactform">
                     <h2 id="contacthead">Contact Us</h2>
                     <form method="GET" action="" onsubmit="return validateForm();">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
-                        <label for="comments">Comments:</label>
-                        <textarea name="comments" id="comments" cols="20" rows="3"></textarea>
-                        <label for="newsletter">Join our newsletter.</label>
-                        <input type="checkbox" name="newsletter" id="newsletter" checked>
+                        <div class="row">
+                            <div class="twocolumn">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="twocolumn">                        
+                                <input type="text" name="name" id="name">                     
+                                <input type="email" name="email" id="email">                  
+                                <textarea name="comments" id="comments" cols="20" rows="3"></textarea>                          
+                                <input type="checkbox" name="newsletter" id="newsletter" checked>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="twocolumn">
+
+                            </div>
+                            <div class="twocolumn">
+                                
+                            </div>
+                        </div>
                         <input type="submit" value="Submit" id="formsubmit">
                     </form>
                 </div>
-
             </main><!-- End of Main -->
     
 
