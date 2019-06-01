@@ -13,30 +13,55 @@
         background-color: #333;
     }
     /* Contact Page */
+    #contactbg{
+        background-image: url(../images/cat3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
+    }
+
+    #contacthead{
+        margin: 10px 0; 
+        padding: 20px 0;
+        background-color: #17a3b8;
+        border-radius: 30px;
+        color: #333;
+    }
     #contactform{
         text-align: center;
         width: 60%;
+        min-width: 600px;
         margin: 0 20%;
+        margin-bottom: 150px;
     }
-    label{
-        float: left;
-        display: block;
-        text-align: right;
-        padding-right: 1em;
-    }
-
     input, textarea{
+        background-color: rgba(255,255,255,.8);
         display: block;
-        margin-bottom: 1em;
-    }   
-    .row:after{
-        content: "";
-        display: table;
-        clear: both;
+        font-size: 20px;
+        border: #17a2b8 solid 2px;
+        padding: 10px;
+        width: 80%;
+        margin: 10px 10%;
+        border-radius: 15px;
     }
-    .twocolumn{
-        float: left;
-        width: 50%;
+    #newslettermessage{
+        background-color: #17a3b8;
+        border-radius: 15px;
+        width: 40%;
+        margin: 0 30%;
+    }
+    label, #newslettermessage input{
+        display: inline;
+        margin: 0;
+    }
+    #newslettermessage input{
+        width: 20px;
+    }
+    #formsubmit:hover{
+        background-color: #333;
+        color: #fff;
+        border-color: #0e6674;
     }
 </style>
 <script>
@@ -70,30 +95,22 @@
             </header><!-- End of Header -->
             
             <main>
-                <div id="contactform">
-                    <h2 id="contacthead">Contact Us</h2>
-                    <form method="GET" action="" onsubmit="return validateForm();">
-                        <div class="row">
-                            <div class="twocolumn">
-                                <label for="name">Name:</label>
-                            </div>
-                            <div class="twocolumn">                        
-                                <input type="text" name="name" id="name">                     
-                                <input type="email" name="email" id="email">                  
-                                <textarea name="comments" id="comments" cols="20" rows="3"></textarea>                          
-                                <input type="checkbox" name="newsletter" id="newsletter" checked>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="twocolumn">
-
-                            </div>
-                            <div class="twocolumn">
+                <div id="contactbg">
+                    <!-- Break to have contactbg ignore the contacthead's margin -->
+                    <br>
+                    <div id="contactform">
+                        <h2 id="contacthead">Contact Us</h2>
+                        <form method="GET" action="" onsubmit="return validateForm();">                 
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <textarea name="comments" id="comments" cols="20" rows="5" placeholder="Comments..."></textarea>
+                            <div id="newslettermessage">
+                                <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter" checked> Join our mailing list.</label>
                                 
                             </div>
-                        </div>
-                        <input type="submit" value="Submit" id="formsubmit">
-                    </form>
+                            <input type="submit" value="Submit" id="formsubmit">
+                        </form>
+                    </div>
                 </div>
             </main><!-- End of Main -->
     
