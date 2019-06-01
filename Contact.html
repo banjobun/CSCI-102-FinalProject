@@ -13,30 +13,74 @@
         background-color: #333;
     }
     /* Contact Page */
-    #contacthead{
-        margin-left: 7em;
-    }
-    label{
-        float: left;
-        display: block;
-        text-align: right;
-        width: 13em;
-        min-width: 13em;
-        padding-right: 1em;
+    #contactbg{
+        background-image: url(../images/cat3.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100%;
+        width: 100%;
     }
 
-    input, textarea{
-        display: block;
-        margin-bottom: 1em;
+    #contacthead{
+        margin: 10px 0; 
+        padding: 20px 0;
+        background-color: #17a3b8;
+        border-radius: 30px;
+        color: #333;
     }
-    #formsubmit{
-        margin-left: 12em;
-        font-size: 14px;
-        width: 13em;
-    }   
     #contactform{
-        min-width: 410px;
-    } 
+        text-align: center;
+        width: 60%;
+        min-width: 600px;
+        margin: 0 20%;
+        margin-bottom: 150px;
+    }
+    input, textarea{
+        background-color: rgba(255,255,255,.8);
+        display: block;
+        font-size: 20px;
+        border: #17a2b8 solid 2px;
+        padding: 10px;
+        width: 80%;
+        margin: 10px 10%;
+        border-radius: 15px;
+    }
+    #newslettermessage{
+        background-color: #17a3b8;
+        border-radius: 15px;
+        width: 40%;
+        margin: 0 30%;
+    }
+    label, #newslettermessage input{
+        display: inline;
+        margin: 0;
+    }
+    #newslettermessage input{
+        width: 20px;
+    }
+    #formsubmit:hover{
+        background-color: #333;
+        color: #fff;
+        border-color: #0e6674;
+    }
+    textarea{
+        resize: none;
+    }
+    @media(max-width:750px){
+        #contactform{
+            width: 100%;
+            min-width: 210px;
+            margin: 0;
+        }
+        input, textarea, #newslettermessage, #contacthead{
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+        #formsubmit{
+            margin-bottom: 20px;
+        }
+    }
 </style>
 <script>
     function validateForm(){ 
@@ -69,21 +113,23 @@
             </header><!-- End of Header -->
             
             <main>
-                <div id="contactform">
-                    <h2 id="contacthead">Contact Us</h2>
-                    <form method="GET" action="" onsubmit="return validateForm();">
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" id="name">
-                        <label for="email">Email:</label>
-                        <input type="email" name="email" id="email">
-                        <label for="comments">Comments:</label>
-                        <textarea name="comments" id="comments" cols="20" rows="3"></textarea>
-                        <label for="newsletter">Join our newsletter.</label>
-                        <input type="checkbox" name="newsletter" id="newsletter" checked>
-                        <input type="submit" value="Submit" id="formsubmit">
-                    </form>
+                <div id="contactbg">
+                    <!-- Break to have contactbg ignore the contacthead's margin -->
+                    <br>
+                    <div id="contactform">
+                        <h2 id="contacthead">Contact Us</h2>
+                        <form method="GET" action="" onsubmit="return validateForm();">                 
+                            <input type="text" name="name" id="name" placeholder="Name">
+                            <input type="email" name="email" id="email" placeholder="Email">
+                            <textarea name="comments" id="comments" cols="20" rows="5" placeholder="Comments..."></textarea>
+                            <div id="newslettermessage">
+                                <label for="newsletter"><input type="checkbox" name="newsletter" id="newsletter" checked> Join our mailing list.</label>
+                                
+                            </div>
+                            <input type="submit" value="Submit" id="formsubmit">
+                        </form>
+                    </div>
                 </div>
-
             </main><!-- End of Main -->
     
 

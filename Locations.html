@@ -12,34 +12,102 @@
         position: relative;
         background-color: #333;
     }
+    /* Same heading id from Pets.html */
+    #heading{
+            padding: 20px 20px;
+            margin: 0 10px;
+            background-color: #17a2b8;
+    }
+    #locationbg{
+        text-align: center;
+        background-image: url(../images/mapbg.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    #locationwrapper{
+        width: 60%;
+        margin: 0 20%;
+    }
     .row:after{
         content: "";
         display: table;
         clear: both;
     }
     .twocolumn{
+        margin-top: 20px;
         float: left;
         width: 50%;
     }
-    #mapimage{
-        background-image: url(../images/map.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100%;
-    }
-    #hourstable{
-        width: 100%;
+    #mapimage, #hourstable{
+        width: 90%;
+        margin: 0 5%;
+        border: 2px solid #17a2b8;
     }
     #hourstable, tr, th, td {
-        border: 1px solid black;
+        border: 2px solid #17a2b8;
+        color: #fff;
+        background-color: #333;
         border-collapse: collapse;
-        text-align: center;
+        margin-bottom: 10px;
     }
-
-    th, td{
-        padding: 1px 2px;
+    th{
+        vertical-align: center;
+        padding: 6.5% 5px;
+        width: 25%;
     }
-
+    tr{
+        padding: 2px 1px;
+    }
+    #locationfooter{
+        background-color: #fff;
+        margin-bottom: 75px;
+    }
+    #locationandtime{
+        margin-bottom: 75px;
+        width: 60%;
+        margin: 0 20%;
+    }
+    #locationandtime p{
+        width: 90%;
+        margin: 0 5%;
+    }
+    #mobiletext{
+        display: none;
+    }
+    @media(max-width:750px){
+        #heading{
+            width: 100%;
+            margin: 0;
+        }
+        #locationbg{
+            background-image: none;
+            min-width: 400px;
+        }
+        #locationwrapper{
+            background-color: #fff;
+            width: 100%;
+            margin: 0;
+        }
+        .twocolumn{
+            width: 100%;
+            margin: 0;
+        }
+        #mapimage{
+            width: 100%;
+            margin: 0;
+        }
+        #hourstable{
+            width: 100%;
+            margin: 0;
+        }
+        #desktoptext{
+            display: none;
+        }
+        #mobiletext, #locationfooter{
+            display: inline-block;
+            margin: 10px 0;
+        }
+    }
 </style>
 <body>
         <div id="wrapper">
@@ -57,34 +125,57 @@
             </header><!-- End of Header -->
             
             <main>
-                <h1>Come find us!</h1>
-                <div class="row">
-                    <div class="twocolumn">
-                        <p>
-                            We are located on Orchard Gate off of Newmarket.
-                        </p>
-                        <img id="mapimage" alt="Map showing location of Pete's Pets.">
+                <div id="locationbg">
+                    <!-- Break so the background image ignores the margin of the header -->
+                    <br>
+                    <div id="locationwrapper">  
+                        <h1 id="heading">Come find us!</h1>
+                        <div class="row">
+                            <div class="twocolumn">
+                                <img id="mapimage" src="images/map.jpg" alt="Map showing location of Pete's Pets.">
+                                <p id="mobiletext">
+                                    We are located on Orchard Gate off of Newmarket.
+                                </p>
+                            </div>
+                            <div class="twocolumn">
+                                <table id="hourstable">
+                                    <tr>
+                                        <th>Monday</th>
+                                        <td>10AM-7PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Tuesday</th>
+                                        <td>10AM-7PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Wednesday</th>
+                                        <td>10AM-8PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Thursday</th>
+                                        <td>10AM-8PM</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Friday</th>
+                                        <td>10AM-10PM</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
                     </div>
-                    <div class="twocolumn">
-                        <p>
-                            Come drop by to see our freinds during our hours listed below. (We are closed Saturday and Sunday).
-                        </p>
-                        <table id="hourstable">
-                            <tr>
-                                <th>Monday</th>
-                                <th>Tuesday</th>
-                                <th>Wednesday</th>
-                                <th>Thursday</th>
-                                <th>Friday</th>
-                            </tr>
-                            <tr>
-                                <td>10AM-7PM</td>
-                                <td>10AM-7PM</td>
-                                <td>10AM-8PM</td>
-                                <td>10AM-8PM</td>
-                                <td>10AM-10PM</td>
-                            </tr>
-                        </table>
+                    <div id="locationfooter">
+                        <div class="row" id="locationandtime">
+                            <div class="twocolumn">
+                                <p id="desktoptext">
+                                    We are located on Orchard Gate off of Newmarket.
+                                </p>
+                            </div>
+                            <div class="twocolumn">
+                                <p>
+                                    Come drop by to see our freinds during our hours listed above. (We are closed Saturday and Sunday).
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
