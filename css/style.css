@@ -50,6 +50,9 @@ nav a{
 nav a:hover{
     background-color: #17a2b8;
 }
+h1{
+    text-align: center;
+}
 
 .show{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/dog.jpg);
@@ -165,7 +168,7 @@ footer nav{
         padding: 10px;
     }
     .logo{
-        float: left;
+        float: none;
     }
     nav ul{
         float: none;

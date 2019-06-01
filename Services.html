@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Final Project | Home</title>
+    <title>Pete's Pets | Services</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <style>
@@ -12,7 +12,21 @@
         position: relative;
         background-color: #333;
     }
+    h1,p{
+        text-align: center;
+    }
     
+    a img{
+        float: left;
+        width: 50%;
+        height: 400px;
+    }
+    @media(max-width:750px){
+        a img{
+            float: none;
+            width: 50%;
+        }
+    }
 </style>
 <body>
         <div id="wrapper">
@@ -30,13 +44,17 @@
             </header><!-- End of Header -->
             
             <main>
-                <h1>Links to Services Pages with Images</h1>
-                <a href="Store.html">Store</a>
-                <a href="Locations.html">Locations</a>
-                <a href="faq.html">FAQ</a>
-                <a href="Reviews.html">Customer Reviews</a>
-                <a href="Events.html">Events</a>
-
+                <div class="servicelinks">
+                    <a href="Store.html"><img src="images/Store.jpg" alt=""></a>
+                    <a href="Locations.html"><img src="images/maplink.jpg" alt=""></a>
+                    <div class="clearfix"></div>
+                    <a href="faq.html"><img src="images/FAQ.jpeg" alt=""></a>
+                    <a href="Reviews.html"><img src="images/Reviews.jpeg" alt=""></a>
+                    <div class="clearfix"></div>
+                    <a href="Events.html"><img src="images/Events.jpg" alt=""></a>
+                    <a href="Contact.html"><img src="images/Contact.jpg" alt=""></a>
+                    <div class="clearfix"></div>
+                </div>
                 
 
             </main><!-- End of Main -->
