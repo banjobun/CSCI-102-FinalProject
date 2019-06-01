@@ -63,6 +63,24 @@
         color: #fff;
         border-color: #0e6674;
     }
+    textarea{
+        resize: none;
+    }
+    @media(max-width:750px){
+        #contactform{
+            width: 100%;
+            min-width: 210px;
+            margin: 0;
+        }
+        input, textarea, #newslettermessage, #contacthead{
+            width: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+        #formsubmit{
+            margin-bottom: 20px;
+        }
+    }
 </style>
 <script>
     function validateForm(){ 
