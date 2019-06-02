@@ -22,6 +22,116 @@ header{
     background-color: #333;
     
 }
+.aboutp{
+    width: 80%;
+    margin-left: 10%
+}
+.eventsp p{
+        margin-left: 5%;
+        width: 90%;
+    }
+#contactbg{
+    background-image: url(../images/cat3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+}
+
+#contacthead{
+    margin: 10px 0; 
+    padding: 20px 0;
+    background-color: #17a3b8;
+    border-radius: 30px;
+    color: #333;
+}
+#contactform{
+    text-align: center;
+    width: 60%;
+    min-width: 600px;
+    margin: 0 20%;
+}
+input, textarea{
+    background-color: rgba(255,255,255,.8);
+    display: block;
+    font-size: 20px;
+    border: #17a2b8 solid 2px;
+    padding: 10px;
+    width: 80%;
+    margin: 10px 10%;
+    border-radius: 15px;
+}
+#newslettermessage{
+    background-color: #17a3b8;
+    border-radius: 15px;
+    width: 40%;
+    margin: 0 30%;
+}
+label, #newslettermessage input{
+    display: inline;
+    margin: 0;
+}
+#newslettermessage input{
+    width: 20px;
+}
+#formsubmit:hover{
+    background-color: #333;
+    color: #fff;
+    border-color: #0e6674;
+}
+textarea{
+    resize: none;
+}
+@media(max-width:750px){
+    #contactform{
+        width: 100%;
+        min-width: 210px;
+        margin: 0;
+    }
+    input, textarea, #newslettermessage, #contacthead{
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+    }
+    #formsubmit{
+        margin-bottom: 20px;
+    }
+}
+.faq {
+    padding-top: 0px;
+    padding-bottom: 10px;
+    float: right;
+    width: 60%;
+}
+
+.answ {
+    margin-left: 2em;
+}
+
+.banner {
+    width: 40%;
+    height: auto;
+    float: left;
+}
+
+.slider img {
+    width: 99%;
+    height: auto;
+    position: fixed;
+    overflow: hidden;
+}
+@media(max-width:750px){
+    .banner, .faq{
+        width: 100%;
+    }
+    .faq{
+        text-align: center;
+    }
+    .slider img{
+        width: 100vw;
+        margin: 0;
+    }
+}
 
 .logo{
     float: left;
@@ -53,7 +163,164 @@ nav a:hover{
 h1{
     text-align: center;
 }
+#headingl{
+    padding: 20px 20px;
+    margin: 0 10px;
+    background-color: #17a2b8;
+}
+#locationbg{
+text-align: center;
+background-image: url(../images/mapbg.jpg);
+background-size: cover;
+background-repeat: no-repeat;
+}
+#locationwrapper{
+width: 60%;
+margin: 0 20%;
+}
+.row:after{
+content: "";
+display: table;
+clear: both;
+}
+.twocolumn{
+margin-top: 20px;
+float: left;
+width: 50%;
+}
+#mapimage, #hourstable{
+width: 90%;
+margin: 0 5%;
+border: 2px solid #17a2b8;
+}
+#hourstable, tr, th, td {
+border: 2px solid #17a2b8;
+color: #fff;
+background-color: #333;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+th{
+vertical-align: center;
+padding: 6.5% 5px;
+width: 25%;
+}
+tr{
+padding: 2px 1px;
+}
+#locationfooter{
+background-color: rgb(255, 233, 219);
+padding-bottom: 50px;
+}
+#locationandtime{
+margin-bottom: 75px;
+width: 60%;
+margin: 0 20%;
+}
+#locationandtime p{
+width: 90%;
+margin: 0 5%;
+}
+#mobiletext{
+display: none;
+}
+@media(max-width:750px){
+    #headingl{
+        width: 100%;
+        margin: 0;
+    }
+    #locationbg{
+        background-image: none;
+        min-width: 400px;
+    }
+    #locationwrapper{
+        background-color: #fff;
+        width: 100%;
+        margin: 0;
+    }
+    .twocolumn{
+        width: 100%;
+        margin: 0;
+    }
+    #mapimage{
+        width: 100%;
+        margin: 0;
+    }
+    #hourstable{
+        width: 100%;
+        margin: 0;
+    }
+    #desktoptext{
+        display: none;
+    }
+    #mobiletext, #locationfooter{
+        display: inline-block;
+        margin: 10px 0;
+    }
+}
+#cr1{
+    width: 60%;
+}
+#cr2{
+    width: 60%;
+}
+.servicelinks a img{
+    float: left;
+    width: 50%;
+    height: 400px;
+}
+@media(max-width:750px){
+    .servicelinks a img{
+        float: none;
+        width: 100%;
+    }
+}
+.butt {
+    text-decoration: none;
+    color: maroon;
+    size: 16px;
+}
 
+.butt:hover {
+    color: white;
+}
+
+.click1:hover {
+    background-color: #17a2b8;
+}
+.click2:hover {
+    background-color: #17a2b8;
+}
+.click3:hover {
+    background-color: #17a2b8;
+}
+.storebox{
+    width: 33%;
+    float: left;
+    text-align: center;
+    padding-top: 20px;
+}
+.storebox img{
+    height: 300px;
+    border: 3px solid maroon;
+}
+
+ul{
+    list-style-type: circle;
+}
+dt{
+    padding: 10px 20px;
+    text-align: center;
+}
+dd{
+    text-align: center;
+    padding-bottom: 5px;
+}
+.storeh1{
+    text-align: center;
+    text-decoration: underline;
+    color: maroon;
+}
 .show{
     background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/dog.jpg);
     background-attachment: fixed;
@@ -101,6 +368,9 @@ main{
 }
 #heading{
     text-align: center;
+    padding: 20px 20px;
+    margin: 10px;
+    background-color: #17a2b8;
   
 }
 
@@ -139,7 +409,10 @@ footer{
     position: relative;
 }
 footer p{
-    line-height: 150px;
+    line-height: 100px;
+}
+footer img{
+    height: 25px;
 }
 footer nav{
     border: #17a2b8 solid 2px;
@@ -163,7 +436,7 @@ footer nav{
     header{
         width: 100%;
         border-bottom: none;
-        position: absolute;
+        position: relative;
         display: block;
         padding: 10px;
     }
@@ -208,5 +481,9 @@ footer nav{
         text-align: center;
         border: #17a2b8 solid 2px;
 
+    }
+    .storebox{
+        float: none;
+        width: 100%;
     }
 }

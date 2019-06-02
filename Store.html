@@ -7,54 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pete's Pets | Store</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<style>
-    header {
-        position: relative;
-        background-color: #333;
-    }
-
-    .butt {
-        text-decoration: none;
-        color: maroon;
-        size: 16px;
-    }
-
-    .butt:hover {
-        color: white;
-    }
-
-    .click1:hover {
-        background-color: #17a2b8;
-    }
-    .click2:hover {
-        background-color: #17a2b8;
-    }
-    .click3:hover {
-        background-color: #17a2b8;
-    }
-    .box p {
-        height: auto;
-    }
-
-    ul{
-        list-style-type: circle;
-    }
-    dt{
-        padding: 10px 20px;
-        text-align: center;
-    }
-    dd{
-        text-align: center;
-        padding-bottom: 5px;
-    }
-    h1{
-        text-align: center;
-        text-decoration: underline;
-        color: maroon;
-    }
-
-</style>
 
 <body>
     <div id="wrapper">
@@ -72,9 +26,9 @@
         </header><!-- End of Header -->
 
         <main>
-            <h1>Online Store</h1>
+            <h1 class="storeh1">Online Store</h1>
             <div class="things">
-                <div class="box" id="p1">
+                <div class="storebox" id="p1">
                     <img src="images/petSup.jpg" alt="">
                     <div class="click1">
                         <a class="butt" href="#">
@@ -82,31 +36,31 @@
                         </a>
                     </div><!-- end of click -->
                     <p>A wide variety of toys, food, and other pet related items.</p>
-                </div><!-- End of Box -->
+                </div><!-- End of storebox -->
 
-                <div class="box">
+                <div class="storebox">
                     <img src="images/kennel.jpg" alt="">
                     <div class="click2">
                         <a class="butt" href="#">
                             <h2>Boarding</h2>
                         </a>
-                    </div><!-- End of Box -->
+                    </div><!-- End of storebox -->
                     <p>We offer a full range of daily to weekly services for your pet.</p>
-                </div><!-- End of Box -->
-                <div class="box">
+                </div><!-- End of storebox -->
+                <div class="storebox">
                     <img src="images/dog8.jpg" alt="See our grooming options.">
                     <div class="click3">
                         <a class="butt" href="#">
                             <h2>Grooming</h2>
                         </a>
-                    </div><!-- End of Box -->
+                    </div><!-- End of storebox -->
                     <p>Grooming can include washing, cutting, and styling.</p>
 
-                </div><!-- End of Box -->
-
+                </div><!-- End of storebox -->
+                <div class="clearfix"></div>
             </div><!-- End of things -->
             <div class="groom">
-                <h1>Grooming</h1>
+                <h1 class="storeh1">Grooming</h1>
                 <dl>
                     <dt><h3>Washing</h3></dt>
                     <dd>Pet washing starting at $20 up to $50 depending on the size of your pet and the type of fur/hair.</dd>
@@ -119,7 +73,7 @@
             </div>
 
             <div class="board">
-                <h1>BOARDING</h1>
+                <h1 class="storeh1">BOARDING</h1>
                 <dl>
                         <dt><h3>Weekday Rates</h3></dt>
                         <dd>For weekday rates we offer a low price of $60 a day, or $55 if you book 3 or more days.</dd>
@@ -132,7 +86,7 @@
             </div><!-- end of board -->
 
             <div class="sup">
-                <h1>PET SUPPLIES</h1>
+                <h1 class="storeh1">PET SUPPLIES</h1>
                 <dl>
                         <dt><h3>Washing</h3></dt>
                         <dd>Pet washing starting at $20 up to $50 depending on the size of your pet and the type of fur/hair.</dd>
@@ -150,17 +104,10 @@
 
 
         <footer>
-            <div id="footNav">
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="About.html">About</a></li>
-                        <li><a href="Services.html">Services</a></li>
-                        <li><a href="Pets.html">Pets</a></li>
-                        <li><a href="Contact.html">Contact</a></li>
-                    </ul>
-                </nav><!-- End of Nav -->
-            </div>
+            <p>
+            Come see what we're up to on our Facebook Page!
+            <a href="http://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+            </p>
         </footer>
 
 
