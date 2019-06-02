@@ -4,103 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Final Project | Home</title>
+    <title>Pete's Pets | Contact</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <script>
+        function validateForm(){ 
+            // Name
+            if(document.forms[0].name.value == ""){
+                alert("Please enter your name.");
+            }else if(document.forms[0].email.value == ""){
+                alert("Please enter your email.");
+            }else{
+                alert("Information sent.")
+                return true;
+            }
+            // If block failed so dont validate
+            return false;
+        }
+    </script>
 </head>
-<style>
-    header{
-        position: relative;
-        background-color: #333;
-    }
-    /* Contact Page */
-    #contactbg{
-        background-image: url(../images/cat3.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        height: 100%;
-        width: 100%;
-    }
-
-    #contacthead{
-        margin: 10px 0; 
-        padding: 20px 0;
-        background-color: #17a3b8;
-        border-radius: 30px;
-        color: #333;
-    }
-    #contactform{
-        text-align: center;
-        width: 60%;
-        min-width: 600px;
-        margin: 0 20%;
-        margin-bottom: 150px;
-    }
-    input, textarea{
-        background-color: rgba(255,255,255,.8);
-        display: block;
-        font-size: 20px;
-        border: #17a2b8 solid 2px;
-        padding: 10px;
-        width: 80%;
-        margin: 10px 10%;
-        border-radius: 15px;
-    }
-    #newslettermessage{
-        background-color: #17a3b8;
-        border-radius: 15px;
-        width: 40%;
-        margin: 0 30%;
-    }
-    label, #newslettermessage input{
-        display: inline;
-        margin: 0;
-    }
-    #newslettermessage input{
-        width: 20px;
-    }
-    #formsubmit:hover{
-        background-color: #333;
-        color: #fff;
-        border-color: #0e6674;
-    }
-    textarea{
-        resize: none;
-    }
-    @media(max-width:750px){
-        #contactform{
-            width: 100%;
-            min-width: 210px;
-            margin: 0;
-        }
-        input, textarea, #newslettermessage, #contacthead{
-            width: 100%;
-            margin: 0;
-            border-radius: 0;
-        }
-        #formsubmit{
-            margin-bottom: 20px;
-        }
-    }
-</style>
-<script>
-    function validateForm(){ 
-        // Name
-        if(document.forms[0].name.value == ""){
-            alert("Please enter your name.");
-        }else if(document.forms[0].email.value == ""){
-            alert("Please enter your email.");
-        }else{
-            alert("Information sent.")
-            return true;
-        }
-        // If block failed so dont validate
-        return false;
-    }
-</script>
 <body>
         <div id="wrapper">
             <header>
-                <div class="logo">Pete's Pets</div>
+                <div class="logo"><img src="images/logo.png" alt=""></div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -118,7 +44,7 @@
                     <br>
                     <div id="contactform">
                         <h2 id="contacthead">Contact Us</h2>
-                        <form method="GET" action="" onsubmit="return validateForm();">                 
+                        <form method="GET" onsubmit="return validateForm();">                 
                             <input type="text" name="name" id="name" placeholder="Name">
                             <input type="email" name="email" id="email" placeholder="Email">
                             <textarea name="comments" id="comments" cols="20" rows="5" placeholder="Comments..."></textarea>
@@ -127,6 +53,7 @@
                                 
                             </div>
                             <input type="submit" value="Submit" id="formsubmit">
+                            <br>
                         </form>
                     </div>
                 </div>
@@ -134,17 +61,10 @@
     
 
             <footer>
-                <div id="footNav">
-                    <nav>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="About.html">About</a></li>
-                                <li><a href="Services.html">Services</a></li>
-                                <li><a href="Pets.html">Pets</a></li>
-                                <li><a href="Contact.html">Contact</a></li>
-                            </ul>
-                        </nav><!-- End of Nav -->
-                </div>
+                <p>
+                Come see what we're up to on our Facebook Page!
+                <a href="http://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                </p>
             </footer>
     
     

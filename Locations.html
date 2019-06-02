@@ -4,115 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Final Project | Home</title>
+    <title>Pete's Pets | Locations</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 </head>
-<style>
-    header{
-        position: relative;
-        background-color: #333;
-    }
-    /* Same heading id from Pets.html */
-    #heading{
-            padding: 20px 20px;
-            margin: 0 10px;
-            background-color: #17a2b8;
-    }
-    #locationbg{
-        text-align: center;
-        background-image: url(../images/mapbg.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-    #locationwrapper{
-        width: 60%;
-        margin: 0 20%;
-    }
-    .row:after{
-        content: "";
-        display: table;
-        clear: both;
-    }
-    .twocolumn{
-        margin-top: 20px;
-        float: left;
-        width: 50%;
-    }
-    #mapimage, #hourstable{
-        width: 90%;
-        margin: 0 5%;
-        border: 2px solid #17a2b8;
-    }
-    #hourstable, tr, th, td {
-        border: 2px solid #17a2b8;
-        color: #fff;
-        background-color: #333;
-        border-collapse: collapse;
-        margin-bottom: 10px;
-    }
-    th{
-        vertical-align: center;
-        padding: 6.5% 5px;
-        width: 25%;
-    }
-    tr{
-        padding: 2px 1px;
-    }
-    #locationfooter{
-        background-color: #fff;
-        margin-bottom: 75px;
-    }
-    #locationandtime{
-        margin-bottom: 75px;
-        width: 60%;
-        margin: 0 20%;
-    }
-    #locationandtime p{
-        width: 90%;
-        margin: 0 5%;
-    }
-    #mobiletext{
-        display: none;
-    }
-    @media(max-width:750px){
-        #heading{
-            width: 100%;
-            margin: 0;
-        }
-        #locationbg{
-            background-image: none;
-            min-width: 400px;
-        }
-        #locationwrapper{
-            background-color: #fff;
-            width: 100%;
-            margin: 0;
-        }
-        .twocolumn{
-            width: 100%;
-            margin: 0;
-        }
-        #mapimage{
-            width: 100%;
-            margin: 0;
-        }
-        #hourstable{
-            width: 100%;
-            margin: 0;
-        }
-        #desktoptext{
-            display: none;
-        }
-        #mobiletext, #locationfooter{
-            display: inline-block;
-            margin: 10px 0;
-        }
-    }
-</style>
+
 <body>
         <div id="wrapper">
             <header>
-                <div class="logo">Pete's Pets</div>
+                <div class="logo"><img src="images/logo.png" alt=""></div>
                 <nav>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -129,7 +29,7 @@
                     <!-- Break so the background image ignores the margin of the header -->
                     <br>
                     <div id="locationwrapper">  
-                        <h1 id="heading">Come find us!</h1>
+                        <h1 id="headingl">Come find us!</h1>
                         <div class="row">
                             <div class="twocolumn">
                                 <img id="mapimage" src="images/map.jpg" alt="Map showing location of Pete's Pets.">
@@ -185,17 +85,10 @@
     
 
             <footer>
-                <div id="footNav">
-                    <nav>
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="About.html">About</a></li>
-                                <li><a href="Services.html">Services</a></li>
-                                <li><a href="Pets.html">Pets</a></li>
-                                <li><a href="Contact.html">Contact</a></li>
-                            </ul>
-                        </nav><!-- End of Nav -->
-                </div>
+                <p>
+                Come see what we're up to on our Facebook Page!
+                <a href="http://facebook.com"><img src="images/facebook.png" alt="Facebook"></a>
+                </p>
             </footer>
     
     
