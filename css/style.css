@@ -278,7 +278,6 @@ display: none;
 .butt {
     text-decoration: none;
     color: maroon;
-    size: 16px;
 }
 
 .butt:hover {
@@ -388,7 +387,6 @@ main{
     width: 100%;
     height: 100%;
     margin: 0;
-    size: 150px;
     border: #17a2b8 solid 2px;
 }
 .box p{
